@@ -1,0 +1,13 @@
+name: Test This
+on: 
+  push:
+    branches: [ test_that ]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+          ref: test_that
+      - run: npm ci
+      
+  
